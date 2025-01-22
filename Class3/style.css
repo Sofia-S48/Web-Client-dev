@@ -1,0 +1,30 @@
+h1
+{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: purple;
+    text-align: center;
+    font-size: 30px;
+}
+/* class type, share custamization exeptions */
+/* Id's are unique, classes aren't */
+.middleH1{
+    background-color: aquamarine;
+}
+.h1Font{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+}
+
+.fruit1{
+    background-color: aquamarine;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.fruit2{
+    background-color: beige;
+}
+
+.jumbotron{
+    background-color: aliceblue;
+}
