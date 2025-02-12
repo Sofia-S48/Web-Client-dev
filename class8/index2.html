@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>OOP in JavaScript</h2>
+
+    <script>
+        // object oriented programing
+        // prototype \ blueprint
+        class Person
+        {
+            // we need to create a constructor
+            // in javaScript we dont define properties outside of the constructor
+            constructor(name, age, email)
+            {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+            }
+
+            // methods functions
+            introduce()
+            {
+                console.log("Hello my name is " + this.name + ", I am " + this.age + " years old, and my email is " + this.email);
+            }
+
+        }
+
+        // creating an object
+        const person1 = new Person("Sofia", 19, "sofia@gmail.com");
+        // call method
+        person1.introduce();
+
+
+        const person2 = new Person("John", 25, "john@gmail.com");
+        person2.introduce();
+
+        // print only name
+        console.log(person1.name +" " + person2.name);
+
+        class Cars
+        {
+            constructor(color, model, year)
+            {
+                this.color = color;
+                this.model = model;
+                this.year = year;
+            }
+            carInfo()
+            {
+                console.log("The car is a " + this.color + " " + this.model + " from " + this.year);
+            }
+        }
+
+        const car1 = new Cars("black", "BMW", 2022);
+        car1.carInfo(); 
+        const car2 = new Cars("silver", "Mercedes", 2021);
+        car2.carInfo();
+
+
+        class Product
+        {
+            constructor(name, price, category)
+            {
+                this.name = name;
+                this.price = price;
+                this.category = category;
+            }
+        }
+
+        class Cart
+        {
+            constructor()
+            {
+                // array to hold product objects
+                this.products = [];
+            }
+
+            // arrow function to add product
+            addProduct = (product) =>
+            {
+                this.products.push(product);
+            }
+
+            // remove product by name
+            removeProduct = (productName) =>
+            {
+                // higher order functions
+                // change the product array end equal to in my products array in objects
+                // that I already added, ignore the object that has name == productName
+                // filter, consider, keep the products that do not have name == productName
+            // filter and remove the products that have name == productName
+                this.products = this.products.filter(product => product.name !== productName);
+            }
+            applyTax()
+            {
+                this.products.forEach(product => {
+                    product.price = product.price * 1.5;
+                });
+            }
+
+        }
+
+        // example
+        // create a cart object
+        const cart = new Cart();
+
+        // create a product object
+        const p1 = new Product("Laptop", 1000, "Electronics");
+        const p2 = new Product("Phone", 500, "Electronics");
+        const p3 = new Product("Shirt", 50, "Clothing");
+
+        // add one by one to cart array
+        cart.addProduct(p1);
+        cart.addProduct(p2);
+        cart.addProduct(p3);
+
+        // print cart
+        console.log(cart.products);
+        cart.removeProduct("Laptop");
+        console.log(cart.products);
+
+
+
+        // Assignemnt add applyTax() method in cart class
+
+        cart.applyTax();
+        console.log(cart.products);
+    </script>
+    
+</body>
+</html>

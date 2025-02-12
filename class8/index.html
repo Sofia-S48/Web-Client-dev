@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Frist JavaScript File</title>
+    <link rel="stylesheet" href="style.css">
+    <!--JavaScript-->
+    <script src="script.js"></script>
+    <!--Can be used here or can be placed at the end of the body-->
+</head>
+<body>
+    <!--People confuse java(Back-end) with JavaScript(Front-end)
+    JavaSxript allows developers to create dynamic content, animations from validation, real-time update, ...-->
+    <!--Key features in JavaScript
+    1- Client side Execution- Runs directly in the user's browser
+    2- Dynamic and loosely typed- Variables can hold different data types
+    Event- Driven - listens to user interactions-->
+
+    <!-- Chage the appereance or cahnge CSS, change content,-->
+    <h2 id="demo">Good Morning</h2>
+    <p id="demo2">It is a Beautiful day</p>
+    <p id="demo3"></p>
+
+    <!--Change the content-->
+    <button type="button" onclick="document.getElementById('demo').innerHTML = 'Good afternoon'">Afternoon</button>
+    <button type="button" onclick="document.getElementById('demo2').innerHTML = 'It is rainning'">If rainning,Click</button>
+    <button type="button" onclick="document.getElementById('demo3').innerHTML = 'Goodbye, have a good day!'">Goodbye</button>
+
+    <!--Change attribute value -->
+    <br><br><br>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize = '50px'">Change font size</button>
+    <button type="button" onclick="document.getElementById('demo2').style.fontFamily = 'courier'">Change font family</button>
+    <!--chagne the color-->
+    <button type="button" onclick="document.getElementById('demo').style.color = 'red'">Change color</button>
+    <!--Change display-->
+    <!--Hide and show the element content-->
+    <br><br><br>
+    <button type="button" onclick="document.getElementById('demo').style.display = 'none'">Hide</button>
+    <button type="button" onclick="document.getElementById('demo').style.display = 'block'">Show</button>
+
+    <!--Function and how we call the functions-->
+    <br><br><br>
+    <button type="button" onclick="myFunction()">Change Geading font by function</button>
+    <p id="myCalcul"></p>
+    <button type="button" onclick="showCalcul()">Show number</button>
+    <script>
+        // I want to change the text inside the h2 tag and print "Hello I love JavaScript"
+        // I want user to click on the button and make this text change
+
+        // explaining basics of JavaScript
+        // Create variables
+
+        console.log("Hello JavaScript");
+        let x = 19;
+        console.log(x);
+        var text = "Lexie"; // old way(avoid using var)
+        let age = 25;
+
+        let name = "John"; // new way
+        let num = 50; //int
+        let isActive = false; //boolean
+        let value; //undefined
+        let empty = null; //null
+
+        console.log(name + ", " + num + " ," + isActive + ", " + value + ", " + empty);
+
+        // arethmic operations and logical operations
+
+        let a=10;
+        let b =5;
+
+        console.log(a+b);
+        console.log(a>b);
+        console.log(a > 4 && b < 2);
+
+        // constant value
+
+        const pi = 3.14;
+        const schoolName = 'CollegeLaSalle';
+
+        console.log(pi + "" + schoolName);
+
+
+        // control Flow --> conditional statement
+            let score =80;
+            if(score >= 90)
+            {
+                console.log("Grade A");
+            }
+            else if (score >=70)
+            {
+                console.log ("Grade B");
+            }
+            else 
+            {
+                console.log ("Grade C");
+            }
+
+            //Switch Statement
+
+            let day = "Monday"
+            switch (day)
+            {
+                case "Monday":
+                    console.log("Start of the week!");
+                    break;
+                    case "Friday":
+                        console.log("Weekend is near!");
+                        break;
+                        default:
+                        console.log ("A regular Day");
+            }
+
+
+            //loops 
+            for (let i=1; i<=5 ; i++)
+            {
+                console.log ("Iteration" + i);
+            }
+
+            //while loop
+            let count=0;
+            while(count < 5)
+            {
+                console.log ("Count : " +count);
+                count++;
+            }
+
+
+        presentation();
+
+
+        // no parameters
+        const sayHello = () => "Hello World";
+        console.log(sayHello());
+
+        // Multiple Parameters
+        const multiply = (a,b) => {
+            console.log("multiplying:" , a,b);
+            return a*b;
+        }
+        console.log(multiply(3,5));
+
+        // Arrays in JavaScript
+        const fruites = ["apple", "banana", "orange"]; 
+        console.log(fruits);
+        console.log(fruits[0]);
+        console.log(fruits.length);
+
+        // looping through array
+
+        const colors= ["red", "green", "blue"];
+        // // using for loop
+        for(let i=0; i<colors.length; i++)
+        {
+            console.log(colors[i]);
+        }
+
+        // create an array of your favorite cars
+        // show the list of your favorite cars
+
+        const cars = ["BMW", "Mercedes", "Audi", "Lamborghini"];
+        for(let i=0; i<cars.length; i++)
+        {
+            console.log(cars[i]);
+        }
+
+        // Add an element to the end of an array
+        colors.push("yellow");
+
+        // remove an element from the end of an array
+        colors.pop();
+        for (let i=0; i<colors.length; i++)
+        {
+            console.log(colors[i]);
+        }
+        
+        
+
+
+    </script>
+</body>
+</html>
