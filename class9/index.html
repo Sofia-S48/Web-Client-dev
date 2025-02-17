@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Assignment</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Class Assignment</h1>
+    <script>
+        class book
+        {
+            constructor
+            {
+                this.title = title;
+                this.author = author;
+                this.year = year;
+                this.isAvailable = true;
+            }
+            
+
+        }
+        class Library
+        {
+            constructor()
+            {
+                this.books = [];
+            }
+
+            addBook(book)
+            {
+                this.books.push(book);
+            }
+            getAvailableBooks()
+            {
+                return this.books.filter(book => book.isAvailable);
+            }
+
+            allBooks()
+            {
+                return this.books.map(book => book.title);
+            }
+            removeBook(title)
+            {
+                this.book = this.book.filter(book => book.title !== title);
+            }
+            borrowBook(title)
+            {
+                if(this.book.title == title)
+                {
+                    this.book.isAvailable = false;
+                }
+            }
+            returnBook(title)
+            {
+                if(this.book.title == title)
+                {
+                    this.book.isAvailable = true;
+                }
+            }
+            getAvailableBooks()
+            {
+                return this.books.filter(book => book.isAvailable);
+            }
+            listAllBooks()
+            {
+                return this.books;
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
